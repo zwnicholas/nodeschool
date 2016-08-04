@@ -9,7 +9,4 @@ function cb (err, filtered) {
 dirname = process.argv[2];
 ext = process.argv[3];
 
-function dirfilter (dir, extens) {
-	dirmod(dir, extens, cb);
-}
-dirfilter(dirname, ext);
+dirmod(dirname, ext, cb);
