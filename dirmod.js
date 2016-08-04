@@ -9,9 +9,7 @@ var path = require('path');
 		if (err)
 			return callback(err);// early return 
 		var	filtered = list.filter(function (p) {
-			if (path.extname(p) === extapp)
-				return p;
-			
+				return path.extname(p) === extapp
 		});/*Key error was here. callback can't be in filter callback.
 		Need to find out why. I guess it would be preferable
 		to call the callback with the complete filtered array.
